@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>ABC</title>
+
+  <script>
+    
+   window.addEventListener('load', function () {
+    var slider_text =document.querySelector('.titulo_slider');
+    slider_text.innerHTML='Aprendizaje interactivo';
+    var template=document.getElementById('article-template');
+    
+    var articles =document.getElementById('articles');
+
+    for(var i=0; i<=5;i++){
+      var clonado=template.cloneNode(true);
+      clonado.removeAttribute('id');
+      var h2 =clonado.getElementsByTagName('h2')[0];
+      h2.innerHTML=h2.textContent+' '+i;
+      articles.appendChild(clonado);
+    }
+   });
+   
+  </script>
+</head>
+<body>
+  <header id="header">
+    <div class="center">
+      <!-- Logo -->
+      <div id="logo">
+        <img src="assets/imagen/abc.svg" alt="Logotipo" class="app-logo"/>
+        <span id="brand">
+          ABC
+                </span>
+      </div>
+      <!-- Menu -->
+      <nav id="menu">
+        <ul>
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="matematica.html">Matematicas</a>
+          </li>
+          <li>
+            <a href="ingles.html">Ingles</a>
+          </li>
+          <li>
+            <a href="ciencias.html">Ciencias Naturales</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- LimpiarFlotado -->
+      <div class="clearfix"></div>
+    </div>    
+  </header>
+
+  <div id="slider" class="slider-big">
+    <h1 class='titulo_slider'>Bienvenido al Master en Frameworks para JavaScript</h1>
+    <a href="blog.html" class="btn-white">Ir al blog</a>
+  </div>
+
+  <div class="center">
+    <section id="content">
+      <h2 class="subheader">Ultimos Artículos</h2>
+
+      
+        <!-- listado articulos -->
+        <div id="articles">
+          <article class="article-item" id="article-template">
+            <div class="image-wrap">
+              <img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" alt="Paisaje">
+            </div>
+            <h2>Articulo de Prueba</h2>
+            <span class="date">
+              hace 5 minutos
+            </span>
+            <a href="article.html">Leer Mass...</a>
+            <div class="clearfix"></div>
+          </article>
+        </div>
+        
+    </section>
+
+    
+
+    <aside id="sidebar">
+      <div id="nav-blog" class="sidebar-item">
+        <h3>Puedes Hacer esto</h3>
+        <a href="#" class="btn btn-success">Crear Articlo</a>
+      </div>
+      <div id="search" class="sidebar-item">
+        <h3>Buscador</h3>
+        <p>Encuentra el articulo que buscas</p>
+        <form>
+          <input type="text" name="search"/>
+          <input type="submit" name="submit" value="buscar" class="btn"/>
+        </form>
+      </div>
+    </aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer">
+    <div class="center">
+      <p>&copy;ABC 2020</p>
+    </div>
+  </footer>
+</body>
+
+</html>
