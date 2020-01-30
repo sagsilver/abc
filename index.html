@@ -10,21 +10,21 @@
 
   <script>
     
-   window.addEventListener('load', function () {
-    var slider_text =document.querySelector('.titulo_slider');
-    slider_text.innerHTML='Aprendizaje interactivo';
-    var template=document.getElementById('article-template');
+  //  window.addEventListener('load', function () {
+  //   var slider_text =document.querySelector('.titulo_slider');
+  //   slider_text.innerHTML='Aprendizaje interactivo';
+  //   var template=document.getElementById('article-template');
     
-    var articles =document.getElementById('articles');
-
-    for(var i=0; i<=5;i++){
-      var clonado=template.cloneNode(true);
-      clonado.removeAttribute('id');
-      var h2 =clonado.getElementsByTagName('h2')[0];
-      h2.innerHTML=h2.textContent+' '+i;
-      articles.appendChild(clonado);
-    }
-   });
+  //   var articles =document.getElementById('articles');
+    
+  //   for(var i=0; i<=5;i++){
+  //     var clonado=template.cloneNode(true);
+  //     clonado.removeAttribute('id');
+  //     var h2 =clonado.getElementsByTagName('h2')[0];
+  //     h2.innerHTML=h2.textContent+' '+i;
+  //     articles.appendChild(clonado);
+  //   }
+  //  });
    
   </script>
 </head>
@@ -77,9 +77,9 @@
         <div id="articles">
           <article class="article-item" id="article-template">
             <div class="image-wrap">
-              <img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" alt="Paisaje">
+              <img src="https://i.ytimg.com/vi/PnWFuIlIUGs/maxresdefault.jpg" alt="Paisaje" class="imagen-muestra">
             </div>
-            <h2>Articulo de Prueba</h2>
+            <h2>Sumas</h2>
             <span class="date">
               hace 5 minutos
             </span>
@@ -113,6 +113,8 @@
       <p>&copy;ABC 2020</p>
     </div>
   </footer>
+  <script src="app.js"></script>
+
 </body>
 
 </html>
