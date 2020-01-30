@@ -275,11 +275,13 @@ textarea{
 .article-detalle .image-wrap{
     float: none;
     width: 100%;
-    height: 300px;
+    height: auto;
+    overflow: hidden;
+    
 }
 .article-detalle .image-wrap img{
     width:  100%;
-    height: auto;
+   
 }
 .article-detalle .subheader{
     margin-top: 15px;
@@ -333,7 +335,7 @@ textarea{
         width: 70%;
     }
 }
-@media(max-width: 497px){
+@media(max-width: 518px){
     #header{
         min-height:130px;
         overflow: hidden;
@@ -342,8 +344,11 @@ textarea{
         line-height: 50px;
     }
     #menu ul li{
-        margin-left: 7px;
-        margin-right:7px ;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    #menu a {
+        font-size: 15px;
     }
     #slider{
         height: 180px;
